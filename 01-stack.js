@@ -31,7 +31,7 @@ const Stack = function() {
 const s1 = new Stack();
  s1.push(5);
  console.log(s1.peek());
- s1.push("12")
+ s1.push("First");
  console.log(s1.peek());
 
  s1.display();
