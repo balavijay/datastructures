@@ -2,12 +2,12 @@ const Stack = function() {
     this.storage = {};
     this.count = 0;
 
-    this.push = function(value){
+    this.push = (value) => {
         this.storage[this.count] = value;
         this.count++;
     }
 
-    this.pop = function() {
+    this.pop = () => {
         if(this.count == 0 ) {
             return;
         }
@@ -17,26 +17,28 @@ const Stack = function() {
         return value;
     }
 
-    this.peek = function(){
-
+    this.peek = () => {
        return( this.storage[this.count-1]);
+    }
 
+    this.display = () => {
+        console.log("count=", this.count, "store=", this.storage);
     }
 
 
 }
 
-let s1 = new Stack();
+const s1 = new Stack();
  s1.push(5);
  console.log(s1.peek());
- s1.push(12)
+ s1.push("12")
  console.log(s1.peek());
 
- console.log("count=", s1.count, "store=", s1.storage);
+ s1.display();
  console.log(s1.pop());
- console.log("count=", s1.count, "store=", s1.storage); 
+ s1.display();
  console.log(s1.pop());
- console.log("count=", s1.count, "store=", s1.storage);
+ s1.display();
  console.log(s1.pop());
- console.log("count=", s1.count, "store=", s1.storage);
+ s1.display();
 
