@@ -1,4 +1,6 @@
 # datastructures
 
 Javascript data structures 
-1. Stack 
+01. Stack 
+02. Queue
+03. Binary Tree
